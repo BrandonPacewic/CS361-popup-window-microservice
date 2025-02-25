@@ -16,7 +16,8 @@ The GUI logic runs in a separate thread from the FastAPI app, ensuring the API r
 
 - macOS with a functioning GUI environment.
 - Python 3 with Tkinter installed.
-- [Homebrew](https://brew.sh) + `brew install tcl-tk` (optional, if you lack Tkinter).
+- [Homebrew](https://brew.sh) + `brew install tcl-tk`
+  - Optional, if you lack Tkinter. Included by default on most systems. Try without first, if you get an error like `No module named '_tkinter'` you will need to install it manually.
 
 ## Installation & Usage
 
