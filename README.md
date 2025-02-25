@@ -30,7 +30,7 @@ pip install -r requirements.txt
 2. **Run the microservice**:
 
 ```bash
-fastapi run main.py
+fastapi run popup/main.py
 ```
 
 3. The API defaults to `http://localhost:8000`.
@@ -96,7 +96,7 @@ fastapi run main.py
 ## Running the Tests
 
 ```
-python test.py
+python tests/test.py
 ```
 
 ## UML Sequence Diagram
