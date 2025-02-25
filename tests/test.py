@@ -1,5 +1,6 @@
 import requests
 import json
+from time import sleep
 
 BASE_URL = "http://localhost:8000"
 
@@ -22,6 +23,8 @@ print_response(r)
 print("=== Test #3: Open Help Window ===")
 r = requests.post(f"{BASE_URL}/open-help-window")
 print_response(r)
+
+sleep(5)
 
 print("=== Test #4: Close Help Window ===")
 r = requests.post(f"{BASE_URL}/close-help-window")

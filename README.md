@@ -18,6 +18,7 @@ The GUI logic runs in a separate thread from the FastAPI app, ensuring the API r
 - Python 3 with Tkinter installed.
 - [Homebrew](https://brew.sh) + `brew install tcl-tk`
   - Optional, if you lack Tkinter. Included by default on most systems. Try without first, if you get an error like `No module named '_tkinter'` you will need to install it manually.
+  - If you see a message that ends with something like, `Your system is not configured for tk` then run `brew install python-tk`.
 
 ## Installation & Usage
 
@@ -30,7 +31,7 @@ pip install -r requirements.txt
 2. **Run the microservice**:
 
 ```bash
-fastapi run popup/main.py
+python popup/main.py
 ```
 
 3. The API defaults to `http://localhost:8000`.
