@@ -55,6 +55,24 @@ python popup/main.py
 }
 ```
 
+#### Example call (python)
+
+```python
+import requests
+import json
+
+url = "http://localhost:8000/help-text"
+data = {"help_text": "This is the help text for the popup window."}
+
+response = requests.post(url, json=data)
+if response.status_code == 200:
+    result = response.json()
+    print(f"Response: {result}")
+elif response.status_code == 404:
+    error = response.json().get("detail", "Unknown error")
+    print(f"Error: {error}")
+```
+
 ### 2. Set Help Title
 - **Method**: `POST`
 - **Endpoint**: `/help-title`
@@ -72,6 +90,25 @@ python popup/main.py
 }
 ```
 
+#### Example call (python)
+
+```python
+import requests
+import json
+
+url = "http://localhost:8000/help-title"
+data = {"title": "My Help Window"}
+
+response = requests.post(url, json=data)
+if response.status_code == 200:
+    result = response.json()
+    print(f"Response: {result}")
+elif response.status_code == 404:
+    error = response.json().get("detail", "Unknown error")
+    print(f"Error: {error}")
+
+```
+
 ### 3. Open Help Window
 - **Method**: `POST`
 - **Endpoint**: `/open-help-window`
@@ -84,6 +121,24 @@ python popup/main.py
 }
 ```
 
+#### Example call (python)
+
+```python
+import requests
+import json
+
+url = "http://localhost:8000/open-help-window"
+
+response = requests.post(url)
+if response.status_code == 200:
+    result = response.json()
+    print(f"Response: {result}")
+elif response.status_code == 404:
+    error = response.json().get("detail", "Unknown error")
+    print(f"Error: {error}")
+```
+
+
 ### 4. Close Help Window
 - **Method**: `POST`
 - **Endpoint**: `/close-help-window`
@@ -93,6 +148,24 @@ python popup/main.py
   "message": "Help window is now closed."
 }
 ```
+
+#### Example call (python)
+
+```python
+import requests
+import json
+
+url = "http://localhost:8000/close-help-window"
+
+response = requests.post(url)
+if response.status_code == 200:
+    result = response.json()
+    print(f"Response: {result}")
+elif response.status_code == 404:
+    error = response.json().get("detail", "Unknown error")
+    print(f"Error: {error}")
+```
+
 
 ## Running the Tests
 
